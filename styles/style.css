@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root{
+    --primarytextcolor: #232e35;
+    --secondtextcolor: #656d72;
+    --bordercolor: #f1f1f1;
+    --bordercolor2: #FFF67E;
+    --linecolor: #d9d9d9;
+    --stbackgroundcolor: #fff;
+    --ndbackgroundcolor: #fbfbfb;
+    --rdbackgroundcolor: #bcdba8;
+    --iconcolor: #76885B;
+    --iconcoloehover: #BFEA7C;
+    --padding: 6rem 0;
+    --itemborderradius: 0.7rem;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--primarytextcolor);
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--secondtextcolor);
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* buttons */
+.btn {
+    padding: 1rem 1.5rem;
+    background-color: whitesmoke;
+    border: 1.5px solid var(--bordercolor);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px;
+}
+
+/* title */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+.pre-title{
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--secondtextcolor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+/* layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--linecolor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+
+/* logo dan navigasi */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a{
+    color: var(--primarytextcolor);
+}
+
+nav ul li{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    color: var(--primarytextcolor);
+}
+
+/* burger */
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all .3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* hero section */
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: .5rem 0 1rem;
+}
+
+.hero-name span {
+    color: var(--iconcolor);
+}
+
+.hero-right img {
+    width: 95%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* portfolio section */
+#portfolio {
+    background-color: var(--ndbackgroundcolor);
+    padding: var(--padding);
+}
+
+.portfolio .pre-title{
+    margin: 0 auto;
+}
+
+.portfolio-title{
+    text-align: center;
+}
+
+.portfolio {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--stbackgroundcolor);
+    border-radius: var(--itemborderradius);
+}
+
+.portfolio h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.Portfolio-icon {
+    background: var(--rdbackgroundcolor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.portfolio-icon svg {
+    fill: var(--iconcolor);
+}
+
+/* portfolios section */
+#portfolios {
+    padding: var(--padding);
+}
+
+.portfolio {
+    border-radius: var(--itemborderradius);
+    overflow: hidden;
+}
+
+.portfolio-cover {
+    height: 250px;
+}
+
+.portfolio-cover img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portfolio-title a svg:hover {
+    fill: var(--iconcolor);
+}
+
+.portfolio-title a svg {
+    transition: ease-in-out 0.2s;
+}
+
+/* bio dan skills */
+#bio {
+    padding: var(--padding);
+    background: var(--ndbackgroundcolor);
+}
+
+.bio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit), minmax(350px, 1rf);
+    gap: 1.5rem;
+}
+
+/* galeri section */
+#galeri {
+    padding: var(--padding);
+}
+
+.galeri-cover {
+    width: 250px;
+}
+
+/* CONTACT section */
+#contact {
+    padding: var(--padding);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: var(--bordercolor2);
+    border: 1px solid var(--bordercolor2);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #416D19;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #416D19
+}
+
+.btn-submit {
+    width: 100%;
+    padding: .75rem;
+    background-color: var(--iconcolor);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: var(--iconcoloehover);
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+    background: var(--rdbackgroundcolor);
+    width: 50px;
+    height: 50px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+footer {
+    padding: 4rem 0;
+    background: var(--ndbackgroundcolor);
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0 .5rem;
+}
+
+.footer-icons svg {
+    fill: #416D19;
+}
